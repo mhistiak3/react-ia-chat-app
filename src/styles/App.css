@@ -1,0 +1,152 @@
+@import "./variable.css";
+/* ============== Start NavBar============== */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  padding: 0px 30px;
+  background-color: var(--color-1);
+  border-bottom: 1px solid var(--color-6);
+}
+nav h3 {
+  font-size: 25px;
+  font-weight: 300;
+  background-color: var(--color-2);
+  padding: 5px 20px;
+  border-radius: 5px;
+}
+nav a {
+  color: var(--color-1);
+  text-decoration: none;
+}
+nav div a {
+  color: var(--color-2);
+  margin-right: 20px;
+}
+/* ============== End NavBar============== */
+/* 
+-
+-
+-
+-
+*/
+
+/* Global */
+section {
+  max-width: 500px;
+  margin: 0 auto;
+  box-shadow: 1px 2px 50px var(--color-6);
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 100px;
+}
+section h3 {
+  text-align: center;
+  font-size: 28px;
+  color: var(--color-2);
+  font-weight: 400;
+  margin-top: 15px;
+}
+/* Global */
+/* ============== Start Register Form============== */
+
+section .form {
+  margin-top: 30px;
+  padding: 0px 20px;
+}
+.input_container {
+  margin-top: 20px;
+}
+.input_container input {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  margin-top: 10px;
+  border: 1px solid var(--color-6);
+  border-radius: 5px;
+}
+.btn_container {
+  margin: 15px 0;
+  text-align: center;
+}
+.btn {
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid var(--color-4);
+  background: var(--color-1);
+  color: var(--color-2);
+  cursor: pointer;
+  transition: 0.3s ease-in-out all;
+  font-size: 16px;
+}
+.btn:hover {
+  transform: scale(1.05);
+}
+.error {
+  color: var(--color-5);
+  text-align: center;
+  padding: 10px;
+}
+/* ============== End Register Form============== */
+
+/* ============== Start Profile page============== */
+.profile_container {
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+}
+.img_container {
+  position: relative;
+  margin-right: 20px;
+}
+.img_container img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 1px solid var(--color-4);
+  transition: 0.5s ease-in-out all;
+}
+
+.img_container:hover img {
+  opacity: 0.4;
+}
+.overly {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.img_container:hover .overly {
+  opacity: 1;
+}
+/*  */
+.text_container {
+  flex-grow: 1;
+}
+.text_container h3 {
+  text-align: left;
+  margin-bottom: 10px;
+  font-size: 22px;
+  color: var(--color-4);
+}
+.text_container hr {
+  margin: 10px 0;
+}
+/* ============== End Profile Page============== */
+@media (max-width: 700px) {
+  nav {
+    padding: 0 10px;
+  }
+  nav h3 {
+    font-size: 20px;
+    font-weight: 300;
+    background-color: var(--color-2);
+    padding: 5px 15px;
+    border-radius: 5px;
+  }
+}

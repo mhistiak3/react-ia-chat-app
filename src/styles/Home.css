@@ -1,0 +1,277 @@
+@import "./variable.css";
+input:focus {
+  outline: none;
+}
+.home_container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  overflow: hidden;
+  height: calc(100vh - 70px);
+  width: 100vw;
+}
+
+/* user */
+.users_container {
+  margin-top: 10px;
+  border-right: 2px solid var(--color-6);
+  overflow-y: auto;
+}
+.search_bar {
+  width: 100%;
+  padding: 20px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search_bar input {
+  font-size: 17px;
+  background-color: var(--color-2);
+  border-radius: 5px;
+  padding: 10px 15px;
+  width: 90%;
+  color: var(--color-1);
+  border: 2px solid var(--color-1);
+}
+.user_wrapper {
+  margin-bottom: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+.user_info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.user_details {
+  display: flex;
+  align-items: center;
+  /* width: 100%; */
+}
+
+.user_details h4 {
+  margin-left: 10px;
+  font-size: 22px;
+  font-weight: 300;
+}
+.user_details img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid var(--color-1);
+}
+.user_status {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.online {
+  background-color: #34eb52;
+}
+.offline {
+  background-color: var(--color-5);
+}
+
+/* Message Form */
+.messages_container {
+  position: relative;
+  width: 100%;
+}
+.messages_user {
+  padding: 10px 20px;
+  text-align: center;
+  border-bottom: 2px solid var(--color-6);
+  display: flex;
+  align-items: center;
+}
+.messages_user img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.no_conversation {
+  text-align: center;
+  color: var(--color-4);
+  font-size: 25px;
+  margin-top: 20px;
+}
+/* From */
+.message_form {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+  justify-content: center;
+}
+.message_form input {
+  width: 60vw;
+  margin: 0px 10px;
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  background-color: var(--color-2);
+  color: var(--color-1);
+}
+
+/* Message section */
+.messages {
+  height: calc(100vh - 200px);
+  overflow: auto;
+  border-bottom: 1px solid var(--color-6);
+  padding: 10px;
+}
+
+.messages h3 {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 30px;
+  font-weight: 300;
+}
+.message_wrapper {
+  margin-top: 10px;
+  padding: 0 5px;
+}
+.message_wrapper img {
+  width: 100%;
+  border-radius: 5px;
+}
+.message_wrapper p {
+  padding: 10px;
+  display: inline-block;
+  width: 30%;
+  text-align: left;
+  border-radius: 5px;
+  position: relative;
+}
+.message_wrapper small {
+  display: inline-block;
+  opacity: 0.6;
+  margin-top: 10px;
+}
+.own {
+  text-align: right;
+}
+.me {
+  background-color: var(--color-2);
+  color: var(--color-1);
+}
+.friend {
+  background-color: var(--color-6);
+  /* color: var(--color-1); */
+}
+.delete_msg {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: none;
+  padding: 5px;
+}
+.message_wrapper p:hover .delete_msg {
+  display: inline;
+}
+.selected_user {
+  background-color: var(--color-6);
+}
+.lastMessage {
+  font-size: 14px;
+  white-space: nowrap;
+  width: 40%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-left: 60px;
+}
+.lastMessage strong {
+  margin-right: 5px;
+}
+.unread {
+  margin-left: 10px;
+  background-color: var(--color-3);
+  color: white;
+  padding: 2px 4px;
+  border-radius: 10px;
+}
+
+/* Media */
+@media (max-width: 1100px) {
+  .home_container {
+    grid-template-columns: 2fr 4fr;
+  }
+  /* .search_bar {
+    padding: 15px 5px;
+  }
+  .search_bar input {
+    font-size: 15px;
+
+    padding: 5px 10px;
+    width: 95%;
+  } */
+  .user_details h4 {
+    font-size: 20px;
+  }
+  .user_details img {
+    width: 40px;
+    height: 40px;
+  }
+  .lastMessage {
+    font-size: 12px;
+    margin-left: 50px;
+  }
+  /* Form */
+
+  .message_form input {
+    width: 40vw;
+  }
+  .message_wrapper p {
+    width: 50%;
+  }
+}
+@media (max-width: 800px) {
+  .home_container {
+    display: flex;
+    position: relative;
+  }
+  .users_container {
+    width: 100%;
+    height: calc(100vh - 70px);
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 100;
+    background-color: var(--color-1);
+  }
+  .messages_container {
+    height: calc(100vh - 70px);
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    background-color: var(--color-1);
+  }
+  .show {
+    z-index: 110;
+  }
+  .no_conversation {
+    padding: 30px;
+  }
+  .messages_user {
+    padding: 20px;
+  }
+  .message_form {
+    height: 30px;
+    margin-bottom: 10px;
+  }
+  .message_form input {
+    width: 55vw;
+  }
+  .message_wrapper p {
+    width: 70%;
+    margin: 5px 0;
+  }
+}
